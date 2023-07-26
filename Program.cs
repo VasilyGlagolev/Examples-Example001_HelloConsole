@@ -10,18 +10,21 @@ class Program
         Console.Write("Введите второе число: ");
         int b = int.Parse(Console.ReadLine());
 
-        if (a > b)
+        Console.Write("Введите третье число: ");
+        int c = int.Parse(Console.ReadLine());
+
+        int max = a;
+        if (b > max)
         {
-            Console.WriteLine($"Максимальное число: {a}");
-            Console.WriteLine($"Минимальное число: {b}");
+            max = b;
         }
-        else
+        if (c > max)
         {
-            Console.WriteLine($"Максимальное число: {b}");
-            Console.WriteLine($"Минимальное число: {a}");
+            max = c;
         }
+
+        Console.WriteLine($"Максимальное число: {max}");
 
         Console.ReadKey();
     }
 }
-
